@@ -1,0 +1,60 @@
+body { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+.app { min-height: 100vh; }
+.sidebar { width: 240px; min-height: 100vh; }
+.main { transition: margin-left .2s ease; }
+.sidebar-open .main { margin-left: 240px; }
+.sidebar-closed .main { margin-left: 0; }
+
+/* Sidebar visibility for toggling */
+.sidebar { position: fixed; left: 0; top: 0; bottom: 0; width: 240px; z-index: 1030; display: flex; flex-direction: column; }
+.sidebar-hidden { display: none !important; pointer-events: none; }
+.sidebar-visible { display: flex !important; pointer-events: auto; z-index: 2000; -webkit-overflow-scrolling: touch; touch-action: auto; }
+
+/* Ensure all children accept pointer events and touch interactions */
+.sidebar * { pointer-events: auto !important; touch-action: manipulation !important; }
+
+/* On large screens keep sidebar visible */
+@media (min-width: 992px) {
+  .sidebar { display: flex !important; position: fixed; }
+  .sidebar-hidden { display: flex !important; }
+}
+
+/* For small screens show sidebar as overlay when visible */
+@media (max-width: 991px) {
+  .sidebar { width: 260px; background: linear-gradient(180deg,#071024,#0b1220); }
+  .sidebar-visible { box-shadow: 0 8px 24px rgba(2,6,23,0.6); }
+}
+
+/* Backdrop shown on mobile when sidebar is open */
+.sidebar-backdrop { display: none; }
+@media (max-width: 991px) {
+  .sidebar-backdrop { display: block; position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 1500; }
+}
+
+/* Dark theme */
+.dark-mode { background: #0b0f13; color: #e6eef6; }
+.dark-mode .card { background: #0f1720; color: #e6eef6; border: 1px solid rgba(255,255,255,0.04); }
+.dark-mode .sidebar { background: linear-gradient(180deg,#071024,#0b1220); color: #dbeafe; }
+.dark-mode .navbar { background: #071126 !important; }
+.dark-mode .form-control, .dark-mode .form-select, .dark-mode textarea { background: #0b1722; color: #e6eef6; border: 1px solid rgba(255,255,255,0.06); }
+.dark-mode .btn-primary { background-color: #0d6efd; border-color: #0d6efd; }
+.dark-mode .btn-secondary { background-color: #444b54; border-color: #444b54; }
+.dark-mode .progress { background: rgba(255,255,255,0.04); }
+.dark-mode .progress-bar { background: #16a34a; }
+.dark-mode .badge.bg-success { background-color: #16a34a; }
+.dark-mode .badge.bg-warning { background-color: #f59e0b; color: #111827; }
+.dark-mode .badge.bg-danger { background-color: #dc2626; }
+
+/* Light theme fallback tweaks */
+.card { transition: background .15s, color .15s; }
+
+@media (max-width: 991px) {
+  .sidebar-hidden { display: none !important; }
+  .main { margin-left: 0; }
+
+  /* When sidebar is open on small screens, prevent main interactions */
+  .sidebar-open .main { pointer-events: none; }
+}
+
+/* Ensure main is below overlays */
+.main { position: relative; z-index: 1; }
