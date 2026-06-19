@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Assignment-Tracker-App/static/css/main.088db87a.css",
+    "main.js": "/Assignment-Tracker-App/static/js/main.8c32c4b8.js",
+    "index.html": "/Assignment-Tracker-App/index.html",
+    "main.088db87a.css.map": "/Assignment-Tracker-App/static/css/main.088db87a.css.map",
+    "main.8c32c4b8.js.map": "/Assignment-Tracker-App/static/js/main.8c32c4b8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.088db87a.css",
+    "static/js/main.8c32c4b8.js"
+  ]
+}
