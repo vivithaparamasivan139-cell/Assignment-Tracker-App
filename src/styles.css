@@ -58,3 +58,18 @@ body { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvet
 
 /* Ensure main is below overlays */
 .main { position: relative; z-index: 1; }
+
+/* New visual improvements */
+.dashboard-banner { width: 100%; border-radius: 8px; display: block; box-shadow: 0 6px 22px rgba(2,6,23,0.25); }
+
+.card { border-radius: 10px; }
+.assignment-thumb { width: 72px; height: 72px; object-fit: cover; border-radius: 8px; flex-shrink: 0; border: 1px solid rgba(0,0,0,0.06); }
+
+/* Slightly larger shadows for depth */
+.card.shadow-sm { box-shadow: 0 6px 18px rgba(11,22,40,0.06); }
+
+/* Responsive tweak for assignment cards */
+@media (max-width: 576px) {
+  .assignment-thumb { width: 56px; height: 56px; }
+  .dashboard-banner { height: auto; }
+}

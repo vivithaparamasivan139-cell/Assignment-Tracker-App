@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#0d6efd"/>
+      <stop offset="1" stop-color="#6f42c1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="260" fill="url(#g)" rx="8"/>
+  <g fill="#fff" font-family="Inter, Arial, sans-serif">
+    <text x="40" y="80" font-size="36" font-weight="700">College Assignment Tracker</text>
+    <text x="40" y="120" font-size="18" fill-opacity="0.95">Keep track of assignments, submissions and deadlines</text>
+  </g>
+</svg>

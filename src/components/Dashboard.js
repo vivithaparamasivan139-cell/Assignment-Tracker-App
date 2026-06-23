@@ -3,6 +3,7 @@ import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 ChartJS.register(ArcElement, Tooltip, Legend);
 import StatisticsChart from './StatisticsChart';
+import banner from '../assets/banner.svg';
 
 export default function Dashboard({ assignments }) {
   const total = assignments.length;
@@ -17,6 +18,7 @@ export default function Dashboard({ assignments }) {
 
   return (
     <div className="dashboard">
+      <img src={banner} alt="Banner" className="dashboard-banner mb-3" />
       <div className="row">
         <div className="col-md-3 mb-3">
           <div className="card shadow-sm">
