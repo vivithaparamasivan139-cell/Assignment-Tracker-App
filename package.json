@@ -10,7 +10,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://vivithaparamasivan139-cell.github.io/Assignment-Tracker-App",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.0",
